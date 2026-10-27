@@ -33,7 +33,7 @@ function showSlide(index) {
 	currentSlide = (index + slides.length) % slides.length;
 	const slide = slides[currentSlide];
 
-	bannerImage.src = `./assets/images/slideshow/${slide.image}`;
+	bannerImage.src = `./images/slideshow/${slide.image}`;
 	bannerImage.alt = slide.alt;
 	bannerText.innerHTML = slide.tagLine;
 

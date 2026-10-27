@@ -105,8 +105,12 @@ header {
 }
 
 #banner {
+	width: 100%;
+	position: relative;
+	margin-bottom: 1em;
+}
+.banner-slide {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -124,7 +128,7 @@ header {
 	object-position: center;
 }
 
-#banner::after {
+.banner-slide::after {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -166,17 +170,16 @@ header {
 }
 /* Gestion des points du carrousel */
 .dots {
-	position: absolute;
-	bottom: 40px;
-	z-index: 3;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 10px;
+	margin: 16px auto 0;
 }
 .dot {
 	display: block;
 	padding: 0;
-	margin-inline: 5px;
+	margin: 0;
 	width: 13px;
 	height: 13px;
 	background-color: #ffffff00;
@@ -204,12 +207,11 @@ header {
 }
 
 @media (max-width: 600px) {
-	#banner { min-height: 360px; }
+	.banner-slide { min-height: 360px; }
 	#banner p { padding-inline: 62px; font-size: 34px; line-height: 1.2; }
 	#banner span { font-size: 22px; }
 	#banner .arrow { width: 38px; height: 64px; }
 	#banner .arrow img { width: 28px; height: 48px; }
-	.dots { bottom: 20px; }
 }
 #about-us {
 	display: flex;
